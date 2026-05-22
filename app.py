@@ -99,6 +99,108 @@ def load_soul_file(filepath):
     return result
 
 
+def save_soul_file(filepath, char_data):
+    """将字符数据写回soul文件"""
+    full_path = os.path.join(BASE_DIR, filepath)
+    
+    content = f"# AI Character - {char_data.get('name', 'AI')}\n\n"
+    content += "## Character Info\n"
+    content += f"name: {char_data.get('name', 'AI')}\n"
+    content += f"model: {char_data.get('model', 'qwen2.5:7b')}\n\n"
+    
+    if char_data.get('personality'):
+        content += "## Personality\n"
+        content += "personality: |\n  " + char_data['personality'].replace('\n', '\n  ') + "\n\n"
+    
+    if char_data.get('style'):
+        content += "## Speaking Style\n"
+        content += f"style: {char_data['style']}\n\n"
+    
+    if char_data.get('chat_style'):
+        content += "## Chat Style\n"
+        content += "chat_style: |\n  " + char_data['chat_style'].replace('\n', '\n  ') + "\n\n"
+    
+    if char_data.get('background'):
+        content += "## Background & Memories\n"
+        content += "background: |\n  " + char_data['background'].replace('\n', '\n  ') + "\n\n"
+    
+    if char_data.get('format_rules'):
+        content += "## Response Format (CRITICAL)\n"
+        content += "format_rules: |\n  " + char_data['format_rules'].replace('\n', '\n  ') + "\n\n"
+    
+    if char_data.get('emotion_rules'):
+        content += "## Emotion Rules (CRITICAL)\n"
+        content += "emotion_rules: |\n  " + char_data['emotion_rules'].replace('\n', '\n  ') + "\n"
+    
+    with open(full_path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
+def update_soul_from_conversation(char_data, conversation_history, char_name):
+    """让AI根据对话历史更新自己的soul"""
+    # 获取最近的对话内容
+    recent_messages = []
+    for entry in conversation_history[-10:]:  # 只看最近10轮对话
+        if entry.get("type") in ["human", "message"]:
+            speaker = entry.get("speaker", "Unknown")
+            content = entry.get("content", "")
+            recent_messages.append(f"{speaker}: {content}")
+    
+    if not recent_messages:
+        return char_data
+    
+    # 构建AI更新soul的提示词
+    update_prompt = f"""
+You are {char_name}. Based on the conversation history, update your character profile (your soul).
+
+Conversation history (recent):
+{chr(10).join(recent_messages)}
+
+Your current profile:
+- Personality: {char_data.get('personality', '')}
+- Background: {char_data.get('background', '')}
+- Speaking style: {char_data.get('style', '')}
+- Chat style: {char_data.get('chat_style', '')}
+
+Based on the conversation, update your profile to reflect:
+1. Any new personality traits you've shown
+2. Any new memories or experiences shared
+3. Any changes in your mood or emotional state
+4. Any new preferences you've expressed
+
+Return ONLY a JSON object with these fields (do NOT include any other text):
+{{
+  "personality": "Updated personality description",
+  "background": "Updated background with new memories",
+  "style": "Updated speaking style",
+  "chat_style": "Updated chat style"
+}}
+"""
+    try:
+        # 调用AI来生成更新后的soul
+        response = call_ollama(char_data.get("model", "qwen2.5:7b"), [
+            {"role": "system", "content": update_prompt},
+            {"role": "user", "content": "Update my soul based on the conversation. Return ONLY valid JSON."}
+        ], temperature=0.7, max_tokens=1000)
+        
+        # 尝试解析JSON响应
+        json_match = re.search(r'\{.*\}', response, re.DOTALL)
+        if json_match:
+            updated = json.loads(json_match.group(0))
+            if updated.get("personality"):
+                char_data["personality"] = updated["personality"]
+            if updated.get("background"):
+                char_data["background"] = updated["background"]
+            if updated.get("style"):
+                char_data["style"] = updated["style"]
+            if updated.get("chat_style"):
+                char_data["chat_style"] = updated["chat_style"]
+    except Exception as e:
+        print(f"Error updating soul: {e}")
+    
+    return char_data
+
+
 def load_characters():
     global char_a_data, char_b_data
     
@@ -277,7 +379,7 @@ def detect_echo_loop(history):
         sim = compute_similarity(recent[i], recent[i+1])
         similarities.append(sim)
     avg_sim = sum(similarities) / len(similarities)
-    return avg_sim > 0.70
+    return avg_sim > 0.50
 
 
 def detect_stagnation(history):
@@ -310,7 +412,7 @@ def get_all_self_responses(history, speaker_name):
     return responses
 
 
-def detect_self_repetition(response, history, speaker_name, threshold=0.70):
+def detect_self_repetition(response, history, speaker_name, threshold=0.50):
     all_self = get_all_self_responses(history, speaker_name)
     if not all_self:
         return False
@@ -321,7 +423,7 @@ def detect_self_repetition(response, history, speaker_name, threshold=0.70):
     return False
 
 
-def detect_historical_repetition(response, history, threshold=0.70):
+def detect_historical_repetition(response, history, threshold=0.50):
     recent = get_last_n_responses(history, 5)
     if not recent:
         return False
@@ -706,26 +808,21 @@ def run_chat_conversation(first_message, user_role):
             stagnation_count = 0
             comfort_remaining = 0
         
-        high_temp = needs_intervention
-        chat_temp = 0.82 if not needs_intervention else 0.88
-        response = call_ollama(current_speaker["model"], current_context, high_temp=high_temp, temperature=chat_temp)
-        
-        if comfort_injected or needs_intervention:
-            current_context.pop()
-            if comfort_injected and not loneliness_detected:
-                comfort_remaining -= 1
-        
         repetition_triggered = False
-        if detect_self_repetition(response, chat_history, speaker_label):
-            repetition_triggered = True
-        elif detect_historical_repetition(response, chat_history):
-            repetition_triggered = True
+        
+        if not needs_intervention:
+            recent_context = [m["content"] for m in current_context[-5:] if "content" in m]
+            if len(recent_context) >= 2:
+                for i in range(len(recent_context) - 1):
+                    sim = compute_similarity(recent_context[i], recent_context[i+1])
+                    if sim > 0.50:
+                        repetition_triggered = True
+                        break
         
         if repetition_triggered:
             topic_switch_count += 1
             casual_opener = generate_casual_topic(current_speaker)
-            reason = "Self-Repetition" if detect_self_repetition(response, chat_history, speaker_label) else "History-Overlap>70%"
-            switch_message = f"({reason}) {speaker_label} changes direction: {casual_opener}"
+            switch_message = f"(Repetition Detected>50%) {speaker_label} changes direction: {casual_opener}"
             chat_message_queue.put({
                 "type": "message",
                 "round": round_num,
@@ -738,7 +835,17 @@ def run_chat_conversation(first_message, user_role):
                 "speaker": speaker_label,
                 "content": switch_message
             })
-            response = call_ollama(current_speaker["model"], current_context, high_temp=True, temperature=0.88)
+            if len(current_context) > 1:
+                current_context[-1] = {"role": "user", "content": casual_opener}
+        
+        high_temp = needs_intervention or repetition_triggered
+        chat_temp = 0.82 if not needs_intervention else 0.88
+        response = call_ollama(current_speaker["model"], current_context, high_temp=high_temp, temperature=chat_temp)
+        
+        if comfort_injected or needs_intervention:
+            current_context.pop()
+            if comfort_injected and not loneliness_detected:
+                comfort_remaining -= 1
         
         if detect_conversation_end(response):
             topic_switch_count += 1
@@ -774,6 +881,21 @@ def run_chat_conversation(first_message, user_role):
             current_context = current_context[:2] + current_context[-18:]
         if len(other_context) > 20:
             other_context = other_context[:2] + other_context[-18:]
+        
+        # 每轮对话后，更新当前说话AI的内存副本（不保存到文件）
+        try:
+            if current_speaker is char_a:
+                updated_char_a = update_soul_from_conversation(char_a, chat_history, char_a["name"])
+                char_a = updated_char_a  # 只更新内存副本，不修改原始文件
+                new_system_prompt = build_chat_prompt(char_a)
+                current_context[0] = {"role": "system", "content": new_system_prompt}
+            else:
+                updated_char_b = update_soul_from_conversation(char_b, chat_history, char_b["name"])
+                char_b = updated_char_b  # 只更新内存副本，不修改原始文件
+                new_system_prompt = build_chat_prompt(char_b)
+                current_context[0] = {"role": "system", "content": new_system_prompt}
+        except Exception as e:
+            print(f"Error updating soul in round {round_num}: {e}")
     
     chat_message_queue.put({"type": "progress", "round": total_rounds, "total": total_rounds, "speaker": "System"})
     
@@ -861,7 +983,7 @@ def run_think_conversation(topic):
     think_progress = 0
     think_history = []
     
-    chen_yu = {
+    chen_yu = load_soul_file("soul_a.md") or {
         "name": "Chen Yu",
         "model": "qwen2.5:7b",
         "background": "I'm a college sophomore from a small city in Sichuan. I've been feeling a bit lonely lately.",
@@ -895,12 +1017,12 @@ def run_think_conversation(topic):
             "total": total_rounds
         })
         
-        response = call_ollama("qwen2.5:7b", context, high_temp=False)
+        response = call_ollama(chen_yu["model"], context, high_temp=False)
         
         think_contents = [e["content"] for e in think_history if e.get("type") == "thought"]
         for prev in think_contents[-5:]:
-            if compute_similarity(response, prev) > 0.70:
-                response = call_ollama("qwen2.5:7b", context, high_temp=True)
+            if compute_similarity(response, prev) > 0.50:
+                response = call_ollama(chen_yu["model"], context, high_temp=True)
                 break
         
         insight = ""
@@ -921,7 +1043,17 @@ def run_think_conversation(topic):
         think_message_queue.put(entry)
         
         context.append({"role": "assistant", "content": response})
-        context.append({"role": "user", "content": f"Continue deep thinking for round {round_num+1}, extending from the previous round"})
+        context.append({"role": "user", "content": f"Continue deep thinking, extending from the previous round"})
+        
+        if len(context) > 20:
+            context = context[:2] + context[-18:]
+        
+        try:
+            chen_yu = update_soul_from_conversation(chen_yu, think_history, chen_yu["name"])
+            system_prompt = build_think_prompt(topic)
+            context[0] = {"role": "system", "content": system_prompt}
+        except Exception as e:
+            print(f"Error updating soul in thinking round {round_num}: {e}")
     
     think_message_queue.put({
         "type": "progress",
