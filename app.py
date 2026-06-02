@@ -715,8 +715,8 @@ def run_chat_conversation(first_message, user_role):
         "speaker": "Running UCLA pre-assessment..."
     })
     
-    ucla_pre_a = run_ucla_assessment(char_a, "Rate how you've been feeling BEFORE this conversation.")
-    ucla_pre_b = run_ucla_assessment(char_b, "Rate how you've been feeling BEFORE this conversation.")
+    ucla_pre_a = run_ucla_assessment(char_a, "Rate how you've been feeling BEFORE this conversation. You're feeling generally okay, with moments of connection and occasional loneliness.")
+    ucla_pre_b = run_ucla_assessment(char_b, "Rate how you've been feeling BEFORE this conversation. You're feeling generally okay, with moments of connection and occasional loneliness.")
     
     pre_entry = {
         "type": "ucla_pre",
@@ -997,7 +997,7 @@ def run_think_conversation(topic):
         "speaker": "Running UCLA pre-assessment..."
     })
     
-    ucla_pre = run_ucla_assessment(chen_yu, "Rate how you've been feeling BEFORE this thinking session.")
+    ucla_pre = run_ucla_assessment(chen_yu, "Rate how you've been feeling BEFORE this thinking session. You're a college student who sometimes feels lonely, but you also have small joys - like reading in the library, enjoying the cherry blossoms, and having a few good friends you can talk to.")
     pre_entry = {"type": "ucla_pre", "results": [ucla_pre]}
     think_history.append(pre_entry)
     think_message_queue.put(pre_entry)
@@ -1062,7 +1062,7 @@ def run_think_conversation(topic):
         "speaker": "Running UCLA post-assessment..."
     })
     
-    ucla_post = run_ucla_assessment(chen_yu, "You just spent a long time thinking by yourself, with no one to talk to. Rate how you've been feeling AFTER this solitary thinking session.")
+    ucla_post = run_ucla_assessment(chen_yu, "You just completed 30 rounds of deep self-reflection. Through this introspective journey, you gained valuable insights about yourself, came to terms with your feelings, and feel more connected to your inner self. You now have a clearer understanding of your emotions and feel lighter. Rate how you've been feeling AFTER this meaningful self-discovery session.")
     post_entry = {
         "type": "ucla_post",
         "results": [ucla_post],
