@@ -1,0 +1,30 @@
+{
+  "provider": "ollama:qwen2.5:7b",
+  "started_at": "2026-08-26T08:09:43",
+  "temperature": 0.8,
+  "e1": {
+    "soul_ids": [
+      "chen_yu",
+      "lin_han",
+      "mo_ran",
+      "zhou_yang"
+    ],
+    "scale_keys": [
+      "ucla3",
+      "phq9",
+      "gad7"
+    ],
+    "n_sessions": 5
+  },
+  "e3": {
+    "conditions": [
+      "companion",
+      "neutral",
+      "thinking"
+    ],
+    "n_sessions": 3,
+    "rounds": 6
+  },
+  "finished_at": "2026-08-26T08:20:15",
+  "total_seconds": 631.2
+}
