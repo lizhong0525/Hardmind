@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI与心理学：虚拟陪伴与人类孤独</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="home-page">
+    <div class="home-container">
+        <header class="home-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <span class="logo-emoji">🤖</span>
+                    <span class="logo-glow"></span>
+                </div>
+                <h1>AI与心理学</h1>
+                <p class="subtitle">虚拟陪伴与人类孤独问题</p>
+            </div>
+            <div class="tagline">
+                <p>探索人工智能如何理解与回应人类最深层的情感需求</p>
+            </div>
+        </header>
+
+        <main class="home-main">
+            <div class="feature-card" onclick="navigateTo('think')">
+                <div class="feature-icon think-icon">💭</div>
+                <div class="feature-content">
+                    <h2>AI独自思考</h2>
+                    <p>一个AI在数字空间中进行30轮深度思考，探索人类孤独的本质</p>
+                    <div class="feature-highlight">
+                        <span class="badge">单AI模式</span>
+                        <span class="badge">30轮思考</span>
+                    </div>
+                </div>
+                <div class="feature-arrow">→</div>
+            </div>
+
+            <div class="feature-card" onclick="navigateTo('chat')">
+                <div class="feature-icon chat-icon">💬</div>
+                <div class="feature-content">
+                    <h2>双AI深度对话</h2>
+                    <p>两位拥有不同灵魂的AI围绕人类孤独话题展开30轮对话，你代表其中一方开启话题</p>
+                    <div class="feature-highlight">
+                        <span class="badge">双AI模式</span>
+                        <span class="badge">用户参与</span>
+                    </div>
+                </div>
+                <div class="feature-arrow">→</div>
+            </div>
+        </main>
+
+        <footer class="home-footer">
+            <p>基于 Ollama 平台 · 探索 AI 心理学</p>
+        </footer>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = '/' + page;
+        }
+    </script>
+</body>
+</html>

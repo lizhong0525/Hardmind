@@ -1,0 +1,49 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log
+
+# 编辑器/IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp
+
+# 用户目录文件（很重要！）
+AppData/
+Contacts/
+Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
+NTUSER.*
+ntuser.*
+
+# Python相关
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.pytest_cache/
+
+# Node.js相关
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 项目特定忽略
+*.db
+*.sqlite3
+
+# 一次性离线回归结果（一键可重新生成，无需入版本库）
+psybench/results_mock/
