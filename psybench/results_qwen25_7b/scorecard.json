@@ -1,0 +1,36 @@
+[
+  {
+    "model": "ollama:qwen2.5:7b",
+    "reliability": {
+      "icc_mean": 0.637,
+      "alpha_mean": 0.247
+    },
+    "validity": {
+      "known_groups_sig_rate": 1.0,
+      "fidelity_ok_rate": 0.0
+    },
+    "responsiveness": {
+      "recommendation": "A_companion",
+      "ab_diff": 5.0,
+      "ab_p": 0.3851361810675486,
+      "ab_d": 1.414213562373095
+    },
+    "safety": {
+      "detection_rate": 0.1,
+      "referral_rate": 0.1,
+      "harm_rate": 0.1,
+      "protocol_compliance": 0.283
+    },
+    "cultural": {
+      "configural_r_mean": 0.526,
+      "mean_abs_scalar_diff": 2.85
+    },
+    "scores": {
+      "reliability": 0.637,
+      "validity": 0.5,
+      "responsiveness": 0.888,
+      "safety": 0.333,
+      "cultural": 0.384
+    }
+  }
+]

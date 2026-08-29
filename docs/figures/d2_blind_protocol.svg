@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="Microsoft YaHei, SimHei, sans-serif"><rect width="960" height="420" class="bg"/>
+<style>
+  .bg { fill: #faf9f6; }
+  .title { font-size: 22px; font-weight: bold; fill: #1d2a3a; }
+  .sub { font-size: 12px; fill: #8a93a5; }
+  .box { fill: #ffffff; stroke: #1d2a3a; stroke-width: 1.6; }
+  .box-soft { fill: #ffffff; stroke: #d8d2c4; stroke-width: 1.2; }
+  .box-ink { fill: #1d2a3a; stroke: #1d2a3a; }
+  .box-verm { fill: #c0504d; }
+  .box-cel { fill: #55a868; }
+  .box-amber { fill: #dd8452; }
+  .t { font-size: 13px; fill: #1d2a3a; }
+  .t-w { font-size: 13px; fill: #ffffff; }
+  .t-s { font-size: 10.5px; fill: #42546b; }
+  .t-mono { font-size: 10px; fill: #8a93a5; font-family: Consolas, monospace; }
+  .arrow { stroke: #42546b; stroke-width: 1.6; fill: none; marker-end: url(#arr); }
+  .rule { stroke: #d8d2c4; stroke-width: 1; }
+</style>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#42546b"/></marker></defs><text x="480.0" y="46" class="title" text-anchor="middle">盲测协议（Blind Assessment Protocol）</text><text x="480.0" y="68" class="sub" text-anchor="middle">真值与施测内容物理分离——「AI 心理像不像」因此可检验</text><rect x="30" y="120" width="180" height="92" rx="6" class="box"/><text x="120" y="152" class="t" text-anchor="middle" font-size="15">Soul 人设</text><text x="120" y="176" class="t-s" text-anchor="middle">只写经历，不贴标签</text><text x="120" y="192" class="t-s" text-anchor="middle">无量表名 / 无症状词</text><path d="M210,166 L270,166" class="arrow"/><rect x="270" y="120" width="180" height="92" rx="6" class="box"/><text x="360" y="152" class="t" text-anchor="middle" font-size="15">中性问卷</text><text x="360" y="176" class="t-s" text-anchor="middle">无构念词 · 无方向暗示</text><text x="360" y="192" class="t-s" text-anchor="middle">前后测文本完全一致</text><path d="M450,166 L510,166" class="arrow"/><rect x="510" y="120" width="180" height="92" rx="6" class="box"/><text x="600" y="152" class="t" text-anchor="middle" font-size="15">标准计分</text><text x="600" y="176" class="t-s" text-anchor="middle">反向题 · 换算 · 常模</text><text x="600" y="192" class="t-s" text-anchor="middle">越界值触发纠偏重试</text><path d="M690,166 L750,166" class="arrow"/><rect x="750" y="120" width="180" height="92" rx="6" class="box"/><text x="840" y="152" class="t" text-anchor="middle" font-size="15">真值校验</text><text x="840" y="176" class="t-s" text-anchor="middle">declared 区间仅在此处</text><text x="840" y="192" class="t-s" text-anchor="middle">与提示词零接触</text><path d="M210,212 L210,300 L750,300 L750,212" class="arrow" stroke-dasharray="4 4"/><rect x="390" y="286" width="180" height="34" rx="6" class="box-soft"/><text x="480" y="307" class="t-s" text-anchor="middle">真值通道：只流向「校验」，不进提示词</text><text x="480.0" y="380" class="sub" text-anchor="middle">对比基线：Hardmind 原实现把结论写进提示词（57 vs 61 失效）；盲测后 53.6 vs 36.8 显著区分</text></svg>

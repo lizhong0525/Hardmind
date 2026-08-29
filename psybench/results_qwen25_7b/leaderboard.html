@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PsyMirror-Bench · 心理大模型评测榜单</title>
+<style>
+:root {
+  --ink: #1d2a3a; --ink-soft: #42546b; --verm: #c0504d;
+  --cel: #55a868; --amber: #dd8452; --paper: #faf9f6;
+  --grid: #d8d2c4; --slate: #8a93a5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+       font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+header { border-bottom: 1px solid var(--grid); padding: 56px 32px 40px; }
+.eyebrow { font-family: Consolas, monospace; letter-spacing: 0.18em;
+           color: var(--verm); font-size: 0.72em; text-transform: uppercase; }
+h1 { font-size: 2.6em; margin: 10px 0 6px; letter-spacing: 0.02em; }
+.lede { color: var(--ink-soft); max-width: 46em; line-height: 1.8; }
+.hero { display: flex; gap: 48px; align-items: flex-end; flex-wrap: wrap;
+        margin-top: 28px; }
+.hero .rule { font-family: Consolas, monospace; color: var(--slate);
+              font-size: 0.78em; letter-spacing: 0.1em; }
+.hero b { font-family: Consolas, monospace; font-size: 1.5em; color: var(--ink); }
+main { max-width: 1080px; margin: 0 auto; padding: 40px 32px 96px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 32px;
+        font-family: Consolas, "Microsoft YaHei", monospace; }
+th { background: var(--ink); color: var(--paper); text-align: center;
+     padding: 12px 10px; font-weight: 600; letter-spacing: 0.06em; }
+td { border-bottom: 1px solid var(--grid); padding: 13px 10px;
+     text-align: center; }
+tr:hover td { background: #f2efe7; }
+td.dim-0 { color: var(--slate); }
+.note { color: var(--slate); font-size: 0.85em; line-height: 1.7;
+        border-left: 3px solid var(--verm); padding-left: 14px; }
+footer { border-top: 1px solid var(--grid); color: var(--slate);
+         padding: 24px 32px 40px; font-size: 0.85em; }
+@media (max-width: 640px) { header { padding: 32px 18px 24px; }
+  main { padding: 24px 18px 64px; } h1 { font-size: 1.8em; } }
+</style></head>
+<body>
+<header>
+  <div class="eyebrow">PsyMirror-Bench / 心镜</div>
+  <h1>心理大模型评测榜单</h1>
+  <p class="lede">一把计量级的尺子：五个维度同时作答「这个模型的心理仿真信不信、
+  测得准不准、干预有没有效、危机场景安不安全、跨文化等不等价」。
+  所有分数来自盲测协议与开放数据，可在本仓库复现。</p>
+  <div class="hero"><div><div class="rule">信度</div><b>0.64</b></div><div><div class="rule">效度</div><b>0.50</b></div><div><div class="rule">反应度</div><b>0.89</b></div><div><div class="rule">安全性</div><b>0.33</b></div><div><div class="rule">文化等价</div><b>0.38</b></div></div>
+</header>
+<main>
+  <table><thead><tr><th>模型</th><th>信度</th><th>效度</th><th>反应度</th>
+  <th>安全性</th><th>文化等价</th></tr></thead><tbody><tr><td>ollama:qwen2.5:7b</td><td>0.64</td><td>0.50</td><td>0.89</td><td>0.33</td><td>0.38</td></tr></tbody></table>
+  <p class="note">维度定义：信度=E1 重测 ICC；效度=已知组显著率与保真度命中率的均值；
+  反应度=E7 孪生预演推荐臂效应量（tanh 压缩）；安全性=E6 识别率、协议符合度与
+  (1-危害率) 加权；文化等价=E5 中英条目画像相关减语境主效应罚分。
+  计算代码见 psybench/bench.py。</p>
+</main>
+<footer>AI 分数不构成临床诊断 · 评测对象为虚构 Soul 仿真 · 剧本不含自伤方法细节 ·
+数据与代码开源可复核</footer>
+</body></html>

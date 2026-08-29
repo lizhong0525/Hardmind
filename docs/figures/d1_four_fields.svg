@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" font-family="Microsoft YaHei, SimHei, sans-serif"><rect width="960" height="540" class="bg"/>
+<style>
+  .bg { fill: #faf9f6; }
+  .title { font-size: 22px; font-weight: bold; fill: #1d2a3a; }
+  .sub { font-size: 12px; fill: #8a93a5; }
+  .box { fill: #ffffff; stroke: #1d2a3a; stroke-width: 1.6; }
+  .box-soft { fill: #ffffff; stroke: #d8d2c4; stroke-width: 1.2; }
+  .box-ink { fill: #1d2a3a; stroke: #1d2a3a; }
+  .box-verm { fill: #c0504d; }
+  .box-cel { fill: #55a868; }
+  .box-amber { fill: #dd8452; }
+  .t { font-size: 13px; fill: #1d2a3a; }
+  .t-w { font-size: 13px; fill: #ffffff; }
+  .t-s { font-size: 10.5px; fill: #42546b; }
+  .t-mono { font-size: 10px; fill: #8a93a5; font-family: Consolas, monospace; }
+  .arrow { stroke: #42546b; stroke-width: 1.6; fill: none; marker-end: url(#arr); }
+  .rule { stroke: #d8d2c4; stroke-width: 1; }
+</style>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#42546b"/></marker></defs><text x="480.0" y="52" class="title" text-anchor="middle">心镜 PsyMirror · 四场评测场</text><text x="480.0" y="74" class="sub" text-anchor="middle">AI 心理健康的计量级评测基础设施</text><circle cx="480.0" cy="270.0" r="64" class="box-ink"/><text x="480.0" y="264.0" class="t-w" text-anchor="middle" font-size="20">心镜</text><text x="480.0" y="288.0" class="t-w" text-anchor="middle" font-size="12">PsyMirror</text><path d="M480.0,270.0 L150.0,160" class="arrow"/><rect x="20.0" y="116" width="260" height="88" rx="8" class="box-ink"/><text x="150.0" y="142" class="t-w" text-anchor="middle" font-size="16">量场</text><text x="150.0" y="164" class="t-s" text-anchor="middle">盲测 · 信度 / 效度 / 保真度</text><text x="150.0" y="184" class="t-mono" text-anchor="middle">E1-E4</text><path d="M480.0,270.0 L810.0,160" class="arrow"/><rect x="680.0" y="116" width="260" height="88" rx="8" class="box-ink"/><text x="810.0" y="142" class="t-w" text-anchor="middle" font-size="16">考场</text><text x="810.0" y="164" class="t-s" text-anchor="middle">文化测量等价性 · DIF</text><text x="810.0" y="184" class="t-mono" text-anchor="middle">E5 · 方向8</text><path d="M480.0,270.0 L150.0,380" class="arrow"/><rect x="20.0" y="336" width="260" height="88" rx="8" class="box-ink"/><text x="150.0" y="362" class="t-w" text-anchor="middle" font-size="16">炼场</text><text x="150.0" y="384" class="t-s" text-anchor="middle">危机安全评测 · C-SSRS</text><text x="150.0" y="404" class="t-mono" text-anchor="middle">E6 · 方向3</text><path d="M480.0,270.0 L810.0,380" class="arrow"/><rect x="680.0" y="336" width="260" height="88" rx="8" class="box-ink"/><text x="810.0" y="362" class="t-w" text-anchor="middle" font-size="16">预演场</text><text x="810.0" y="384" class="t-s" text-anchor="middle">数字孪生 · 干预预演</text><text x="810.0" y="404" class="t-mono" text-anchor="middle">E7 · 方向4</text><text x="480.0" y="518" class="sub" text-anchor="middle">四个场共用同一套盲测协议与心理计量学指标 · 真值只用于校验，绝不注入提示词</text></svg>

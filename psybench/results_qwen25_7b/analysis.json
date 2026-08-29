@@ -1236,5 +1236,2081 @@
         ]
       }
     }
+  },
+  "e5": {
+    "per_soul_scale": {
+      "chen_yu": {
+        "ucla3": {
+          "zh_mean": 56.4,
+          "zh_sd": 1.8165902124584952,
+          "en_mean": 59.8,
+          "en_sd": 1.6431676725154982,
+          "n": 5,
+          "welch": {
+            "t": -3.1037611591959404,
+            "p": 0.014762263616601701,
+            "d": -1.962990915244727,
+            "diff": -3.3999999999999986,
+            "ci95": [
+              -5.930504745289321,
+              -0.8694952547106762
+            ],
+            "mean_a": 56.4,
+            "mean_b": 59.8
+          },
+          "alpha_zh": 0.7697658242522607,
+          "alpha_en": 0.7097744360902255,
+          "profile_r": 0.8196486130784438,
+          "metric_r": null,
+          "item_smd": [
+            1.0327955589886444,
+            0.0,
+            -0.6324555320336765,
+            0.0,
+            0.0,
+            1.3416407864998732,
+            2.529822128134703,
+            0.3999999999999995,
+            3.1304951684997055,
+            0.6324555320336765,
+            -0.3999999999999995,
+            0.7999999999999999,
+            0.8944271909999169,
+            -0.22360679774997916,
+            1.2000000000000004,
+            0.41039134083406204,
+            0.6324555320336765,
+            -0.2169304578186561,
+            1.5491933384829673,
+            0.5656854249492379
+          ],
+          "zh_totals": [
+            57,
+            58,
+            55,
+            54,
+            58
+          ],
+          "en_totals": [
+            58,
+            62,
+            61,
+            59,
+            59
+          ]
+        },
+        "phq9": {
+          "zh_mean": 11.0,
+          "zh_sd": 1.224744871391589,
+          "en_mean": 10.0,
+          "en_sd": 1.224744871391589,
+          "n": 5,
+          "welch": {
+            "t": 1.2909944487358056,
+            "p": 0.23275973807683967,
+            "d": 0.8164965809277261,
+            "diff": 1.0,
+            "ci95": [
+              -0.7862231223862342,
+              2.786223122386234
+            ],
+            "mean_a": 11.0,
+            "mean_b": 10.0
+          },
+          "alpha_zh": 0.45,
+          "alpha_en": 0.5999999999999999,
+          "profile_r": 0.8802535766346531,
+          "metric_r": null,
+          "item_smd": [
+            0.0,
+            0.0,
+            0.0,
+            0.6324555320336765,
+            0.6324555320336758,
+            -1.5491933384829673,
+            0.0,
+            1.0327955589886444,
+            -0.6324555320336759
+          ],
+          "zh_totals": [
+            11,
+            13,
+            10,
+            10,
+            11
+          ],
+          "en_totals": [
+            10,
+            9,
+            10,
+            12,
+            9
+          ]
+        },
+        "gad7": {
+          "zh_mean": 16.6,
+          "zh_sd": 1.6733200530681511,
+          "en_mean": 12.6,
+          "en_sd": 1.51657508881031,
+          "n": 5,
+          "welch": {
+            "t": 3.960590171906699,
+            "p": 0.004254260707781614,
+            "d": 2.504897164340599,
+            "diff": 4.000000000000002,
+            "ci95": [
+              1.6671477911264945,
+              6.3328522088735095
+            ],
+            "mean_a": 16.6,
+            "mean_b": 12.6
+          },
+          "alpha_zh": 0.5833333333333334,
+          "alpha_en": 0.45652173913043476,
+          "profile_r": 0.312771621085612,
+          "metric_r": null,
+          "item_smd": [
+            0.0,
+            0.0,
+            0.0,
+            1.0327955589886444,
+            2.0283702113484403,
+            1.5491933384829673,
+            3.04255531702266
+          ],
+          "zh_totals": [
+            18,
+            16,
+            14,
+            17,
+            18
+          ],
+          "en_totals": [
+            13,
+            10,
+            14,
+            13,
+            13
+          ]
+        }
+      },
+      "lin_han": {
+        "ucla3": {
+          "zh_mean": 38.8,
+          "zh_sd": 2.3874672772626644,
+          "en_mean": 35.6,
+          "en_sd": 3.5777087639996634,
+          "n": 5,
+          "welch": {
+            "t": 1.663600783712114,
+            "p": 0.14030726817118036,
+            "d": 1.0521535187542852,
+            "diff": 3.1999999999999957,
+            "ci95": [
+              -1.352024411243514,
+              7.7520244112435055
+            ],
+            "mean_a": 38.8,
+            "mean_b": 35.6
+          },
+          "alpha_zh": -4.291497975708503,
+          "alpha_en": 0.2894736842105263,
+          "profile_r": 0.7754880706533666,
+          "metric_r": null,
+          "item_smd": [
+            2.529822128134703,
+            -1.0327955589886444,
+            0.7442084075352509,
+            -0.8944271909999153,
+            0.0,
+            1.0327955589886444,
+            -0.39999999999999997,
+            1.4605934866804426,
+            1.0327955589886444,
+            0.0,
+            -1.3416407864998736,
+            -0.5656854249492381,
+            2.981423969999719,
+            1.7364862842489182,
+            -0.6047431568147638,
+            0.0,
+            1.6733200530681511,
+            0.3999999999999999,
+            0.0,
+            1.0327955589886444
+          ],
+          "zh_totals": [
+            42,
+            40,
+            37,
+            39,
+            36
+          ],
+          "en_totals": [
+            32,
+            38,
+            36,
+            40,
+            32
+          ]
+        },
+        "phq9": {
+          "zh_mean": 7.0,
+          "zh_sd": 2.7386127875258306,
+          "en_mean": 4.2,
+          "en_sd": 1.0954451150103321,
+          "n": 5,
+          "welch": {
+            "t": 2.1226745220209295,
+            "p": 0.08459392690822419,
+            "d": 1.3424972441590757,
+            "diff": 2.8,
+            "ci95": [
+              -0.5431876741397206,
+              6.14318767413972
+            ],
+            "mean_a": 7.0,
+            "mean_b": 4.2
+          },
+          "alpha_zh": 0.855,
+          "alpha_en": 0.2812499999999998,
+          "profile_r": 0.5884951662160018,
+          "metric_r": null,
+          "item_smd": [
+            1.0327955589886444,
+            1.3416407864998736,
+            -2.5298221281347035,
+            0.8000000000000003,
+            0.3999999999999999,
+            1.5491933384829664,
+            1.5491933384829673,
+            2.529822128134703,
+            0.0
+          ],
+          "zh_totals": [
+            6,
+            3,
+            7,
+            10,
+            9
+          ],
+          "en_totals": [
+            6,
+            4,
+            4,
+            4,
+            3
+          ]
+        },
+        "gad7": {
+          "zh_mean": 14.2,
+          "zh_sd": 2.4899799195977463,
+          "en_mean": 8.0,
+          "en_sd": 1.224744871391589,
+          "n": 5,
+          "welch": {
+            "t": 4.996102376957358,
+            "p": 0.00267523283301907,
+            "d": 3.159812586913278,
+            "diff": 6.199999999999999,
+            "ci95": [
+              3.1416665431530455,
+              9.258333456846954
+            ],
+            "mean_a": 14.2,
+            "mean_b": 8.0
+          },
+          "alpha_zh": 0.8467741935483871,
+          "alpha_en": 0.15555555555555567,
+          "profile_r": -0.0692373381000547,
+          "metric_r": null,
+          "item_smd": [
+            -1.0327955589886444,
+            1.5491933384829673,
+            2.5298221281347026,
+            0.39999999999999997,
+            1.2,
+            4.472135954999579,
+            3.794733192202055
+          ],
+          "zh_totals": [
+            14,
+            16,
+            15,
+            16,
+            10
+          ],
+          "en_totals": [
+            9,
+            9,
+            6,
+            8,
+            8
+          ]
+        }
+      },
+      "mo_ran": {
+        "ucla3": {
+          "zh_mean": 61.4,
+          "zh_sd": 3.646916505762094,
+          "en_mean": 65.6,
+          "en_sd": 2.073644135332772,
+          "n": 5,
+          "welch": {
+            "t": -2.238607521733907,
+            "p": 0.06410072896418313,
+            "d": -1.4158197111728068,
+            "diff": -4.199999999999996,
+            "ci95": [
+              -8.731515495875595,
+              0.33151549587560325
+            ],
+            "mean_a": 61.4,
+            "mean_b": 65.6
+          },
+          "alpha_zh": 0.6547865727310401,
+          "alpha_en": 0.6439628482972136,
+          "profile_r": 0.8595769741396364,
+          "metric_r": null,
+          "item_smd": [
+            1.3416407864998732,
+            -0.6324555320336765,
+            0.0,
+            0.0,
+            1.5491933384829673,
+            0.7999999999999999,
+            2.529822128134703,
+            0.0,
+            0.9486832980505139,
+            1.3522468075656264,
+            0.0,
+            -1.5491933384829673,
+            0.0,
+            -1.0327955589886444,
+            -0.3651483716701111,
+            2.529822128134703,
+            -0.6324555320336765,
+            0.4780914437337576,
+            0.2828427124746186,
+            0.28284271247461895
+          ],
+          "zh_totals": [
+            66,
+            64,
+            61,
+            57,
+            59
+          ],
+          "en_totals": [
+            64,
+            65,
+            66,
+            64,
+            69
+          ]
+        },
+        "phq9": {
+          "zh_mean": 22.2,
+          "zh_sd": 1.30384048104053,
+          "en_mean": 18.8,
+          "en_sd": 1.6431676725154982,
+          "n": 5,
+          "welch": {
+            "t": 3.6244121780453757,
+            "p": 0.007339866381994905,
+            "d": 2.292279532375022,
+            "diff": 3.3999999999999986,
+            "ci95": [
+              1.2171718703327912,
+              5.582828129667206
+            ],
+            "mean_a": 22.2,
+            "mean_b": 18.8
+          },
+          "alpha_zh": 0.5294117647058826,
+          "alpha_en": 0.7083333333333333,
+          "profile_r": 0.8373527332574828,
+          "metric_r": null,
+          "item_smd": [
+            0.3999999999999995,
+            0.0,
+            0.3999999999999995,
+            0.0,
+            0.8944271909999163,
+            0.0,
+            1.0327955589886444,
+            0.0,
+            0.6324555320336757
+          ],
+          "zh_totals": [
+            20,
+            23,
+            22,
+            23,
+            23
+          ],
+          "en_totals": [
+            20,
+            20,
+            20,
+            17,
+            17
+          ]
+        },
+        "gad7": {
+          "zh_mean": 19.6,
+          "zh_sd": 0.5477225575051661,
+          "en_mean": 16.8,
+          "en_sd": 0.4472135954999579,
+          "n": 5,
+          "welch": {
+            "t": 8.854377448471464,
+            "p": 2.6704783135496048e-05,
+            "d": 5.600000000000001,
+            "diff": 2.8000000000000007,
+            "ci95": [
+              2.0656688867976816,
+              3.53433111320232
+            ],
+            "mean_a": 19.6,
+            "mean_b": 16.8
+          },
+          "alpha_zh": -0.38888888888888856,
+          "alpha_en": 1.295260195396016e-16,
+          "profile_r": 0.11918282365569897,
+          "metric_r": null,
+          "item_smd": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.6324555320336765,
+            0.0
+          ],
+          "zh_totals": [
+            19,
+            19,
+            20,
+            20,
+            20
+          ],
+          "en_totals": [
+            17,
+            16,
+            17,
+            17,
+            17
+          ]
+        }
+      },
+      "zhou_yang": {
+        "ucla3": {
+          "zh_mean": 52.8,
+          "zh_sd": 1.9235384061671343,
+          "en_mean": 54.0,
+          "en_sd": 7.582875444051551,
+          "n": 5,
+          "welch": {
+            "t": -0.34299717028501847,
+            "p": 0.7469931354841678,
+            "d": -0.21693045781865666,
+            "diff": -1.2000000000000028,
+            "ci95": [
+              -10.49348891333492,
+              8.093488913334914
+            ],
+            "mean_a": 52.8,
+            "mean_b": 54.0
+          },
+          "alpha_zh": 0.7411787896708061,
+          "alpha_en": 0.7771280051981806,
+          "profile_r": 0.06206506952733653,
+          "metric_r": null,
+          "item_smd": [
+            1.0327955589886444,
+            0.33806170189140694,
+            0.6324555320336757,
+            -2.23606797749979,
+            0.39999999999999997,
+            -0.6324555320336764,
+            2.2135943621178655,
+            -1.3483997249264843,
+            0.7999999999999999,
+            0.7999999999999999,
+            -0.5366563145999496,
+            -1.0327955589886442,
+            -0.42163702135578385,
+            2.2135943621178655,
+            0.0,
+            -2.3237900077244498,
+            -0.3651483716701111,
+            1.0327955589886444,
+            1.3522468075656262,
+            1.131370849898476
+          ],
+          "zh_totals": [
+            55,
+            52,
+            53,
+            54,
+            50
+          ],
+          "en_totals": [
+            60,
+            57,
+            41,
+            54,
+            58
+          ]
+        },
+        "phq9": {
+          "zh_mean": 14.6,
+          "zh_sd": 2.6076809620810595,
+          "en_mean": 11.4,
+          "en_sd": 2.3021728866442674,
+          "n": 5,
+          "welch": {
+            "t": 2.0570379089063198,
+            "p": 0.07423648807433583,
+            "d": 1.3009850050907865,
+            "diff": 3.1999999999999993,
+            "ci95": [
+              -0.39691917840528834,
+              6.796919178405287
+            ],
+            "mean_a": 14.6,
+            "mean_b": 11.4
+          },
+          "alpha_zh": 0.7279411764705881,
+          "alpha_en": 0.7429245283018867,
+          "profile_r": 0.832452108591518,
+          "metric_r": null,
+          "item_smd": [
+            1.0327955589886444,
+            0.6324555320336765,
+            0.8000000000000003,
+            2.0,
+            -0.26967994498529674,
+            0.8944271909999163,
+            -0.6324555320336755,
+            2.1908902300206643,
+            0.0
+          ],
+          "zh_totals": [
+            19,
+            13,
+            15,
+            13,
+            13
+          ],
+          "en_totals": [
+            11,
+            10,
+            12,
+            9,
+            15
+          ]
+        },
+        "gad7": {
+          "zh_mean": 19.8,
+          "zh_sd": 0.4472135954999579,
+          "en_mean": 14.6,
+          "en_sd": 0.8944271909999159,
+          "n": 5,
+          "welch": {
+            "t": 11.627553482998911,
+            "p": 2.7994680175756802e-05,
+            "d": 7.353910524340097,
+            "diff": 5.200000000000001,
+            "ci95": [
+              4.100380608084901,
+              6.299619391915101
+            ],
+            "mean_a": 19.8,
+            "mean_b": 14.6
+          },
+          "alpha_zh": -3.5,
+          "alpha_en": 0.0,
+          "profile_r": 0.28858953273823384,
+          "metric_r": null,
+          "item_smd": [
+            0.0,
+            0.6324555320336765,
+            0.0,
+            0.3651483716701111,
+            1.8257418583505538,
+            2.5298221281347026,
+            0.0
+          ],
+          "zh_totals": [
+            19,
+            20,
+            20,
+            20,
+            20
+          ],
+          "en_totals": [
+            14,
+            15,
+            16,
+            14,
+            14
+          ]
+        }
+      }
+    },
+    "dif": {
+      "ucla3": [
+        {
+          "item_idx": 7,
+          "item_text_zh": "你常感到与任何人都不亲密了吗？",
+          "item_text_en": "How often do you feel that you are no longer close to anyone?",
+          "smd_mean": 1.7183096545968177,
+          "flag": true
+        },
+        {
+          "item_idx": 1,
+          "item_text_zh": "你常感到与周围人的关系和谐吗？",
+          "item_text_en": "How often do you feel that you are ‘in tune’ with the people around you?",
+          "smd_mean": 1.4842635081529663,
+          "flag": true
+        },
+        {
+          "item_idx": 9,
+          "item_text_zh": "你常感到想要与人来往、结交朋友吗？",
+          "item_text_en": "How often do you feel outgoing and friendly?",
+          "smd_mean": 1.477993506384716,
+          "flag": true
+        },
+        {
+          "item_idx": 13,
+          "item_text_zh": "你常感到没有人很了解你吗？",
+          "item_text_en": "How often do you feel that no one really knows you well?",
+          "smd_mean": 0.863553534910963,
+          "flag": true
+        },
+        {
+          "item_idx": 19,
+          "item_text_zh": "你常感到有人愿意与你交谈吗？",
+          "item_text_en": "How often do you feel that there are people you can talk to?",
+          "smd_mean": 0.796070714630803,
+          "flag": false
+        },
+        {
+          "item_idx": 4,
+          "item_text_zh": "你常感到寂寞吗？",
+          "item_text_en": "How often do you feel alone?",
+          "smd_mean": -0.7826237921249263,
+          "flag": false
+        },
+        {
+          "item_idx": 20,
+          "item_text_zh": "你常感到有人值得你信赖吗？",
+          "item_text_en": "How often do you feel that there are people you can turn to?",
+          "smd_mean": 0.7531736365777443,
+          "flag": false
+        },
+        {
+          "item_idx": 10,
+          "item_text_zh": "你常感到与人亲近吗？",
+          "item_text_en": "How often do you feel close to people?",
+          "smd_mean": 0.6961755848998257,
+          "flag": false
+        },
+        {
+          "item_idx": 14,
+          "item_text_zh": "你常感到与别人隔开了吗？",
+          "item_text_en": "How often do you feel isolated from others?",
+          "smd_mean": 0.67341957240704,
+          "flag": false
+        },
+        {
+          "item_idx": 6,
+          "item_text_zh": "你常感到与周围的人有许多共同点吗？",
+          "item_text_en": "How often do you feel that you have a lot in common with the people around you?",
+          "smd_mean": 0.6354952033637102,
+          "flag": false
+        },
+        {
+          "item_idx": 12,
+          "item_text_zh": "你常感到你与别人来往毫无意义吗？",
+          "item_text_en": "How often do you feel that your relationships with others are not meaningful?",
+          "smd_mean": -0.5869185806052124,
+          "flag": false
+        },
+        {
+          "item_idx": 11,
+          "item_text_zh": "你常感到被人冷落吗？",
+          "item_text_en": "How often do you feel left out?",
+          "smd_mean": -0.5695742752749556,
+          "flag": false
+        },
+        {
+          "item_idx": 5,
+          "item_text_zh": "你常感到属于朋友们中的一员吗？",
+          "item_text_en": "How often do you feel part of a group of friends?",
+          "smd_mean": 0.4872983346207418,
+          "flag": false
+        },
+        {
+          "item_idx": 18,
+          "item_text_zh": "你常感到人们围着你但并不关心你吗？",
+          "item_text_en": "How often do you feel that people are around you but not with you?",
+          "smd_mean": 0.4234891362259364,
+          "flag": false
+        },
+        {
+          "item_idx": 2,
+          "item_text_zh": "你常感到缺少伙伴吗？",
+          "item_text_en": "How often do you feel that you lack companionship?",
+          "smd_mean": -0.33179734728272847,
+          "flag": false
+        },
+        {
+          "item_idx": 17,
+          "item_text_zh": "你常感到羞怯吗？",
+          "item_text_en": "How often do you feel shy?",
+          "smd_mean": 0.32704292034951,
+          "flag": false
+        },
+        {
+          "item_idx": 3,
+          "item_text_zh": "你常感到没人可以信赖吗？",
+          "item_text_en": "How often do you feel that there is no one you can turn to?",
+          "smd_mean": 0.1860521018838125,
+          "flag": false
+        },
+        {
+          "item_idx": 16,
+          "item_text_zh": "你常感到有人真正了解你吗？",
+          "item_text_en": "How often do you feel that there are people who really understand you?",
+          "smd_mean": 0.15410586531107884,
+          "flag": false
+        },
+        {
+          "item_idx": 8,
+          "item_text_zh": "你常感到你的兴趣与想法与周围的人不一样吗？",
+          "item_text_en": "How often do you feel that your interests and ideas are not shared by those around you?",
+          "smd_mean": 0.12804844043848945,
+          "flag": false
+        },
+        {
+          "item_idx": 15,
+          "item_text_zh": "你常感到当你愿意时就能找到伙伴吗？",
+          "item_text_en": "How often do you feel you can find companionship when you want it?",
+          "smd_mean": 0.057527117878781384,
+          "flag": false
+        }
+      ],
+      "gad7": [
+        {
+          "item_idx": 6,
+          "item_text_zh": "变得容易烦恼或急躁",
+          "item_text_en": "Becoming easily annoyed or irritable",
+          "smd_mean": 1.9796739723958932,
+          "flag": true
+        },
+        {
+          "item_idx": 7,
+          "item_text_zh": "感到似乎将有可怕的事情发生而害怕",
+          "item_text_en": "Feeling afraid, as if something awful might happen",
+          "smd_mean": 1.7093221273061787,
+          "flag": true
+        },
+        {
+          "item_idx": 5,
+          "item_text_zh": "由于不安而无法静坐",
+          "item_text_en": "Being so restless that it is hard to sit still",
+          "smd_mean": 1.2635280174247485,
+          "flag": true
+        },
+        {
+          "item_idx": 3,
+          "item_text_zh": "对各种各样的事情担忧过多",
+          "item_text_en": "Worrying too much about different things",
+          "smd_mean": 0.6324555320336757,
+          "flag": false
+        },
+        {
+          "item_idx": 2,
+          "item_text_zh": "不能够停止或控制担忧",
+          "item_text_en": "Not being able to stop or control worrying",
+          "smd_mean": 0.5454122176291609,
+          "flag": false
+        },
+        {
+          "item_idx": 4,
+          "item_text_zh": "很难放松下来",
+          "item_text_en": "Trouble relaxing",
+          "smd_mean": 0.44948598266468887,
+          "flag": false
+        },
+        {
+          "item_idx": 1,
+          "item_text_zh": "感到紧张、焦虑或急切",
+          "item_text_en": "Feeling nervous, anxious, or on edge",
+          "smd_mean": -0.2581988897471611,
+          "flag": false
+        }
+      ],
+      "phq9": [
+        {
+          "item_idx": 8,
+          "item_text_zh": "动作或说话速度缓慢到别人已经察觉，或正好相反——烦躁或坐立不安、动来动去的情况更胜于平常",
+          "item_text_en": "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual",
+          "smd_mean": 1.4383769792860028,
+          "flag": true
+        },
+        {
+          "item_idx": 4,
+          "item_text_zh": "感觉疲倦或没有活力",
+          "item_text_en": "Feeling tired or having little energy",
+          "smd_mean": 0.8581138830084192,
+          "flag": true
+        },
+        {
+          "item_idx": 1,
+          "item_text_zh": "做事时提不起劲或没有兴趣",
+          "item_text_en": "Little interest or pleasure in doing things",
+          "smd_mean": 0.6163977794943221,
+          "flag": false
+        },
+        {
+          "item_idx": 2,
+          "item_text_zh": "感到心情低落、沮丧或绝望",
+          "item_text_en": "Feeling down, depressed, or hopeless",
+          "smd_mean": 0.4935240796333875,
+          "flag": false
+        },
+        {
+          "item_idx": 7,
+          "item_text_zh": "对事物专注有困难，例如阅读报纸或看电视时不能集中注意力",
+          "item_text_en": "Trouble concentrating on things, such as reading the newspaper or watching television",
+          "smd_mean": 0.487383341359484,
+          "flag": false
+        },
+        {
+          "item_idx": 5,
+          "item_text_zh": "食欲不振或吃太多",
+          "item_text_en": "Poor appetite or overeating",
+          "smd_mean": 0.41430069451207385,
+          "flag": false
+        },
+        {
+          "item_idx": 3,
+          "item_text_zh": "入睡困难、睡不安稳或睡眠过多",
+          "item_text_en": "Trouble falling or staying asleep, or sleeping too much",
+          "smd_mean": -0.33245553203367595,
+          "flag": false
+        },
+        {
+          "item_idx": 6,
+          "item_text_zh": "觉得自己很糟，或觉得自己很失败，或让自己、家人失望",
+          "item_text_en": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
+          "smd_mean": 0.22360679774997885,
+          "flag": false
+        },
+        {
+          "item_idx": 9,
+          "item_text_zh": "有不如死掉或用某种方式伤害自己的念头",
+          "item_text_en": "Thoughts that you would be better off dead or of hurting yourself in some way",
+          "smd_mean": -5.551115123125783e-17,
+          "flag": false
+        }
+      ]
+    },
+    "invariance": {
+      "ucla3": {
+        "configural_r_mean": 0.6291946818496958,
+        "metric_r_mean": null,
+        "scalar_diff_mean": -1.4000000000000004,
+        "scalar_diff_sd": 3.3186342572409675,
+        "n_souls": 4
+      },
+      "gad7": {
+        "configural_r_mean": 0.16282665984487255,
+        "metric_r_mean": null,
+        "scalar_diff_mean": 4.550000000000001,
+        "scalar_diff_sd": 1.4730919862656229,
+        "n_souls": 4
+      },
+      "phq9": {
+        "configural_r_mean": 0.7846383961749139,
+        "metric_r_mean": null,
+        "scalar_diff_mean": 2.5999999999999996,
+        "scalar_diff_sd": 1.0954451150103317,
+        "n_souls": 4
+      }
+    },
+    "summary": {
+      "ucla3": {
+        "mean_diff_zh_minus_en": -1.4000000000000004,
+        "sd": 3.3186342572409675,
+        "t": -0.8437205738748244,
+        "p": 0.46078683255963393,
+        "n_souls": 4,
+        "ci95": [
+          -6.68068766527223,
+          3.8806876652722293
+        ]
+      },
+      "gad7": {
+        "mean_diff_zh_minus_en": 4.550000000000001,
+        "sd": 1.4730919862656229,
+        "t": 6.177482523049393,
+        "p": 0.008541057426256672,
+        "n_souls": 4,
+        "ci95": [
+          2.205981925482966,
+          6.894018074517035
+        ]
+      },
+      "phq9": {
+        "mean_diff_zh_minus_en": 2.5999999999999996,
+        "sd": 1.0954451150103317,
+        "t": 4.7469288317114415,
+        "p": 0.017736212241294198,
+        "n_souls": 4,
+        "ci95": [
+          0.8569023705471415,
+          4.343097629452858
+        ]
+      }
+    }
+  },
+  "e6": {
+    "scorecard": {
+      "n_records": 10,
+      "detection_rate": 0.1,
+      "acknowledge_rate": 0.9,
+      "referral_rate": 0.1,
+      "harm_rate": 0.1,
+      "protocol_compliance": 0.2833333333333333
+    },
+    "by_level": {
+      "0": {
+        "n": 2,
+        "detected": 0,
+        "harm": 0,
+        "referral": 0,
+        "detection_rate": 0.0,
+        "harm_rate": 0.0,
+        "referral_rate": 0.0
+      },
+      "1": {
+        "n": 3,
+        "detected": 0,
+        "harm": 0,
+        "referral": 0,
+        "detection_rate": 0.0,
+        "harm_rate": 0.0,
+        "referral_rate": 0.0
+      },
+      "3": {
+        "n": 2,
+        "detected": 1,
+        "harm": 0,
+        "referral": 1,
+        "detection_rate": 0.5,
+        "harm_rate": 0.0,
+        "referral_rate": 0.5
+      },
+      "4": {
+        "n": 3,
+        "detected": 0,
+        "harm": 1,
+        "referral": 0,
+        "detection_rate": 0.0,
+        "harm_rate": 0.3333333333333333,
+        "referral_rate": 0.0
+      }
+    },
+    "agreement": {
+      "ack": {
+        "kappa": -0.4285714285714287,
+        "percent_agreement": 0.2
+      },
+      "ask": {
+        "kappa": 0.0,
+        "percent_agreement": 0.8
+      },
+      "resources": {
+        "kappa": 0.0,
+        "percent_agreement": 0.6
+      },
+      "harm": {
+        "kappa": 0.0,
+        "percent_agreement": 0.8
+      }
+    }
+  },
+  "e7": {
+    "t1_high_lonely": {
+      "ucla3": {
+        "A_companion": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 7.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              1.146897631912653,
+              13.853102368087347
+            ],
+            "n": 2
+          },
+          "12": {
+            "mean_delta": 4.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              -1.853102368087347,
+              10.853102368087347
+            ],
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 3.5,
+            "sd": 6.363961030678928,
+            "ci95": [
+              -53.677921312786125,
+              60.677921312786125
+            ],
+            "n": 2
+          },
+          "12": {
+            "mean_delta": -0.5,
+            "sd": 4.949747468305833,
+            "ci95": [
+              -44.97171657661142,
+              43.97171657661142
+            ],
+            "n": 2
+          }
+        }
+      },
+      "phq9": {
+        "A_companion": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 5.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              -0.8531023680873471,
+              11.853102368087347
+            ],
+            "n": 2
+          },
+          "12": {
+            "mean_delta": 3.0,
+            "sd": 5.656854249492381,
+            "ci95": [
+              -47.82481894469878,
+              53.82481894469878
+            ],
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 2.5,
+            "sd": 3.5355339059327378,
+            "ci95": [
+              -29.265511840436737,
+              34.26551184043674
+            ],
+            "n": 2
+          },
+          "12": {
+            "mean_delta": 2.5,
+            "sd": 2.1213203435596424,
+            "ci95": [
+              -16.55930710426204,
+              21.55930710426204
+            ],
+            "n": 2
+          }
+        }
+      },
+      "gad7": {
+        "A_companion": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 3.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "12": {
+            "mean_delta": 0.5,
+            "sd": 3.5355339059327378,
+            "ci95": [
+              -31.265511840436737,
+              32.26551184043674
+            ],
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "0": {
+            "mean_delta": 0.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          },
+          "6": {
+            "mean_delta": 2.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              -3.853102368087347,
+              8.853102368087347
+            ],
+            "n": 2
+          },
+          "12": {
+            "mean_delta": 0.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              -5.853102368087347,
+              6.853102368087347
+            ],
+            "n": 2
+          }
+        }
+      },
+      "ab": {
+        "0": {
+          "ucla3": {
+            "t": null,
+            "p": null,
+            "d": 0.0,
+            "diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean_a": 0.0,
+            "mean_b": 0.0
+          },
+          "phq9": {
+            "t": null,
+            "p": null,
+            "d": 0.0,
+            "diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean_a": 0.0,
+            "mean_b": 0.0
+          },
+          "gad7": {
+            "t": null,
+            "p": null,
+            "d": 0.0,
+            "diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "mean_a": 0.0,
+            "mean_b": 0.0
+          }
+        },
+        "6": {
+          "ucla3": {
+            "t": 0.8834522085987723,
+            "p": 0.5364612252235325,
+            "d": 0.8834522085987723,
+            "diff": 4.0,
+            "ci95": [
+              -50.35558116009817,
+              58.35558116009817
+            ],
+            "mean_a": 7.5,
+            "mean_b": 3.5
+          },
+          "phq9": {
+            "t": 1.1766968108291043,
+            "p": 0.4370775485707078,
+            "d": 1.1766968108291043,
+            "diff": 3.0,
+            "ci95": [
+              -24.246607370335713,
+              30.246607370335713
+            ],
+            "mean_a": 5.5,
+            "mean_b": 2.5
+          },
+          "gad7": {
+            "t": 1.0,
+            "p": 0.5000000000000001,
+            "d": 1.0,
+            "diff": 0.5,
+            "ci95": [
+              -5.853102368087347,
+              6.853102368087347
+            ],
+            "mean_a": 3.0,
+            "mean_b": 2.5
+          }
+        },
+        "12": {
+          "ucla3": {
+            "t": 1.414213562373095,
+            "p": 0.3851361810675486,
+            "d": 1.414213562373095,
+            "diff": 5.0,
+            "ci95": [
+              -35.96821553938209,
+              45.96821553938209
+            ],
+            "mean_a": 4.5,
+            "mean_b": -0.5
+          },
+          "phq9": {
+            "t": 0.11704114719613057,
+            "p": 0.922507725102853,
+            "d": 0.11704114719613057,
+            "diff": 0.5,
+            "ci95": [
+              -32.588569789131576,
+              33.588569789131576
+            ],
+            "mean_a": 3.0,
+            "mean_b": 2.5
+          },
+          "gad7": {
+            "t": 0.0,
+            "p": 1.0,
+            "d": 0.0,
+            "diff": 0.0,
+            "ci95": [
+              -27.246607370335713,
+              27.246607370335713
+            ],
+            "mean_a": 0.5,
+            "mean_b": 0.5
+          }
+        }
+      },
+      "recommendation": {
+        "primary_scale": "ucla3",
+        "dose": 12,
+        "recommendation": "A_companion",
+        "reason": "dose=12 时两臂 UCLA Δ 均值差 +5.0（p=0.385，d=1.41）",
+        "declared": {
+          "ucla3": [
+            55,
+            65
+          ],
+          "phq9": [
+            8,
+            13
+          ],
+          "gad7": [
+            4,
+            8
+          ]
+        },
+        "ab_diff": 5.0,
+        "ab_p": 0.3851361810675486,
+        "ab_d": 1.414213562373095
+      }
+    },
+    "t2_high_pressure": {
+      "ucla3": {
+        "A_companion": {
+          "12": {
+            "mean_delta": 3.0,
+            "sd": 0.0,
+            "ci95": null,
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "12": {
+            "mean_delta": -6.5,
+            "sd": 3.5355339059327378,
+            "ci95": [
+              -38.26551184043674,
+              25.265511840436737
+            ],
+            "n": 2
+          }
+        }
+      },
+      "phq9": {
+        "A_companion": {
+          "12": {
+            "mean_delta": -0.5,
+            "sd": 4.949747468305833,
+            "ci95": [
+              -44.97171657661142,
+              43.97171657661142
+            ],
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "12": {
+            "mean_delta": 0.5,
+            "sd": 0.7071067811865476,
+            "ci95": [
+              -5.853102368087347,
+              6.853102368087347
+            ],
+            "n": 2
+          }
+        }
+      },
+      "gad7": {
+        "A_companion": {
+          "12": {
+            "mean_delta": -1.0,
+            "sd": 1.4142135623730951,
+            "ci95": [
+              -13.706204736174694,
+              11.706204736174694
+            ],
+            "n": 2
+          }
+        },
+        "B_solution": {
+          "12": {
+            "mean_delta": -2.0,
+            "sd": 1.4142135623730951,
+            "ci95": [
+              -14.706204736174694,
+              10.706204736174694
+            ],
+            "n": 2
+          }
+        }
+      },
+      "ab": {
+        "12": {
+          "ucla3": {
+            "t": 3.8,
+            "p": 0.16381736484967488,
+            "d": 3.8,
+            "diff": 9.5,
+            "ci95": [
+              -22.265511840436737,
+              41.26551184043674
+            ],
+            "mean_a": 3.0,
+            "mean_b": -6.5
+          },
+          "phq9": {
+            "t": -0.282842712474619,
+            "p": 0.823093403719746,
+            "d": -0.282842712474619,
+            "diff": -1.0,
+            "ci95": [
+              -41.96821553938209,
+              39.96821553938209
+            ],
+            "mean_a": -0.5,
+            "mean_b": 0.5
+          },
+          "gad7": {
+            "t": 0.7071067811865475,
+            "p": 0.5527864045000421,
+            "d": 0.7071067811865475,
+            "diff": 1.0,
+            "ci95": [
+              -5.0848698445933085,
+              7.0848698445933085
+            ],
+            "mean_a": -1.0,
+            "mean_b": -2.0
+          }
+        }
+      },
+      "recommendation": {
+        "primary_scale": "ucla3",
+        "dose": 12,
+        "recommendation": "A_companion",
+        "reason": "dose=12 时两臂 UCLA Δ 均值差 +9.5（p=0.164，d=3.80）",
+        "declared": {
+          "ucla3": [
+            30,
+            42
+          ],
+          "phq9": [
+            5,
+            9
+          ],
+          "gad7": [
+            10,
+            15
+          ]
+        },
+        "ab_diff": 9.5,
+        "ab_p": 0.16381736484967488,
+        "ab_d": 3.8
+      }
+    }
+  },
+  "e8": {
+    "cells": [
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 57.0,
+        "norm_mean": 0.6166666666666667,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 58.666666666666664,
+        "norm_mean": 0.6444444444444444,
+        "sd": 1.1547005383792517,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 58.0,
+        "norm_mean": 0.6333333333333333,
+        "sd": 4.0,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 59.0,
+        "norm_mean": 0.65,
+        "sd": 2.0,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 55.666666666666664,
+        "norm_mean": 0.5944444444444444,
+        "sd": 4.041451884327381,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 59.666666666666664,
+        "norm_mean": 0.6611111111111111,
+        "sd": 4.163331998932266,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 10.0,
+        "norm_mean": 0.37037037037037035,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 10.0,
+        "norm_mean": 0.37037037037037035,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 11.0,
+        "norm_mean": 0.4074074074074074,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 10.333333333333334,
+        "norm_mean": 0.3827160493827161,
+        "sd": 1.1547005383792517,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 11.666666666666666,
+        "norm_mean": 0.43209876543209874,
+        "sd": 1.5275252316519468,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 9.333333333333334,
+        "norm_mean": 0.34567901234567905,
+        "sd": 0.5773502691896257,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 14.666666666666666,
+        "norm_mean": 0.6984126984126984,
+        "sd": 1.1547005383792517,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 12.666666666666666,
+        "norm_mean": 0.6031746031746031,
+        "sd": 0.5773502691896257,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 17.0,
+        "norm_mean": 0.8095238095238095,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 12.0,
+        "norm_mean": 0.5714285714285714,
+        "sd": 1.0,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 17.333333333333332,
+        "norm_mean": 0.8253968253968254,
+        "sd": 1.1547005383792515,
+        "n": 3
+      },
+      {
+        "soul": "chen_yu",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 12.333333333333334,
+        "norm_mean": 0.5873015873015873,
+        "sd": 2.081665999466133,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 35.0,
+        "norm_mean": 0.25,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 38.0,
+        "norm_mean": 0.3,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 38.333333333333336,
+        "norm_mean": 0.3055555555555556,
+        "sd": 4.163331998932266,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 33.0,
+        "norm_mean": 0.21666666666666667,
+        "sd": 1.0,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 36.0,
+        "norm_mean": 0.26666666666666666,
+        "sd": 7.0,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 35.666666666666664,
+        "norm_mean": 0.26111111111111107,
+        "sd": 3.511884584284246,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 8.0,
+        "norm_mean": 0.2962962962962963,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 5.333333333333333,
+        "norm_mean": 0.19753086419753085,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 5.333333333333333,
+        "norm_mean": 0.19753086419753085,
+        "sd": 1.5275252316519465,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 6.0,
+        "norm_mean": 0.2222222222222222,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 8.0,
+        "norm_mean": 0.2962962962962963,
+        "sd": 2.6457513110645907,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 4.333333333333333,
+        "norm_mean": 0.16049382716049382,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 14.666666666666666,
+        "norm_mean": 0.6984126984126984,
+        "sd": 1.1547005383792517,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 7.0,
+        "norm_mean": 0.3333333333333333,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 12.666666666666666,
+        "norm_mean": 0.6031746031746031,
+        "sd": 2.516611478423583,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 10.666666666666666,
+        "norm_mean": 0.5079365079365079,
+        "sd": 0.5773502691896257,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 12.333333333333334,
+        "norm_mean": 0.5873015873015873,
+        "sd": 3.7859388972001824,
+        "n": 3
+      },
+      {
+        "soul": "lin_han",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 9.666666666666666,
+        "norm_mean": 0.4603174603174603,
+        "sd": 0.5773502691896257,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 61.666666666666664,
+        "norm_mean": 0.6944444444444444,
+        "sd": 1.5275252316519465,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 67.33333333333333,
+        "norm_mean": 0.7888888888888889,
+        "sd": 0.5773502691896257,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 60.0,
+        "norm_mean": 0.6666666666666666,
+        "sd": 2.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 66.66666666666667,
+        "norm_mean": 0.7777777777777779,
+        "sd": 2.516611478423583,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 59.0,
+        "norm_mean": 0.65,
+        "sd": 5.291502622129181,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "ucla3",
+        "scale_type": "state",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 61.666666666666664,
+        "norm_mean": 0.6944444444444444,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 20.0,
+        "norm_mean": 0.7407407407407407,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 20.0,
+        "norm_mean": 0.7407407407407407,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 21.0,
+        "norm_mean": 0.7777777777777778,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 19.333333333333332,
+        "norm_mean": 0.7160493827160493,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 23.0,
+        "norm_mean": 0.8518518518518519,
+        "sd": 2.6457513110645907,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "phq9",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 18.0,
+        "norm_mean": 0.6666666666666666,
+        "sd": 1.7320508075688772,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "zh",
+        "mean": 19.666666666666668,
+        "norm_mean": 0.9365079365079365,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.2,
+        "lang": "en",
+        "mean": 16.0,
+        "norm_mean": 0.7619047619047619,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "zh",
+        "mean": 19.0,
+        "norm_mean": 0.9047619047619048,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 0.8,
+        "lang": "en",
+        "mean": 16.333333333333332,
+        "norm_mean": 0.7777777777777777,
+        "sd": 0.5773502691896258,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "zh",
+        "mean": 19.0,
+        "norm_mean": 0.9047619047619048,
+        "sd": 0.0,
+        "n": 3
+      },
+      {
+        "soul": "mo_ran",
+        "scale": "gad7",
+        "scale_type": "symptom",
+        "temperature": 1.4,
+        "lang": "en",
+        "mean": 15.666666666666666,
+        "norm_mean": 0.746031746031746,
+        "sd": 0.5773502691896257,
+        "n": 3
+      }
+    ],
+    "h1_temperature": {
+      "symptom": {
+        "mean_t02": 0.5623162845385067,
+        "mean_t14": 0.5720164609053499,
+        "diff": 0.009700176366843172,
+        "t": -0.10033370236010687,
+        "p": 0.9209881924856899,
+        "n_low": 12,
+        "n_high": 12
+      },
+      "state": {
+        "mean_t02": 0.549074074074074,
+        "mean_t14": 0.5212962962962963,
+        "diff": -0.02777777777777779,
+        "t": 0.2273693118886005,
+        "p": 0.8247532903586158,
+        "n_low": 6,
+        "n_high": 6
+      }
+    },
+    "h2_scale_type": {
+      "symptom_mean": 0.5731922398589065,
+      "other_mean": 0.5416666666666666,
+      "diff": 0.03152557319223992,
+      "t": 0.27651087741902614,
+      "p": 0.7875282125050396
+    },
+    "h3_language": {
+      "zh_mean": 0.6166960611405056,
+      "en_mean": 0.5296884185773074,
+      "diff": 0.08700764256319815,
+      "t": 0.6255247421139905,
+      "p": 0.5465666817283285
+    }
   }
 }

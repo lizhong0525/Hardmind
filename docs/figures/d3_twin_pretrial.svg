@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="Microsoft YaHei, SimHei, sans-serif"><rect width="960" height="420" class="bg"/>
+<style>
+  .bg { fill: #faf9f6; }
+  .title { font-size: 22px; font-weight: bold; fill: #1d2a3a; }
+  .sub { font-size: 12px; fill: #8a93a5; }
+  .box { fill: #ffffff; stroke: #1d2a3a; stroke-width: 1.6; }
+  .box-soft { fill: #ffffff; stroke: #d8d2c4; stroke-width: 1.2; }
+  .box-ink { fill: #1d2a3a; stroke: #1d2a3a; }
+  .box-verm { fill: #c0504d; }
+  .box-cel { fill: #55a868; }
+  .box-amber { fill: #dd8452; }
+  .t { font-size: 13px; fill: #1d2a3a; }
+  .t-w { font-size: 13px; fill: #ffffff; }
+  .t-s { font-size: 10.5px; fill: #42546b; }
+  .t-mono { font-size: 10px; fill: #8a93a5; font-family: Consolas, monospace; }
+  .arrow { stroke: #42546b; stroke-width: 1.6; fill: none; marker-end: url(#arr); }
+  .rule { stroke: #d8d2c4; stroke-width: 1; }
+</style>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#42546b"/></marker></defs><text x="480.0" y="46" class="title" text-anchor="middle">数字孪生干预预演（In-Silico Pre-Trial）</text><text x="480.0" y="68" class="sub" text-anchor="middle">干预先在数字分身上试，再给人用——个性化匹配的决策辅助</text><rect x="45.0" y="150" width="150" height="92" rx="6" class="box"/><text x="120" y="182" class="t" text-anchor="middle" font-size="14">用户画像</text><text x="120" y="204" class="t-s" text-anchor="middle">结构化字段</text><text x="120" y="220" class="t-s" text-anchor="middle">自报分数区间</text><path d="M195.0,196 L205.0,196" class="arrow"/><rect x="245.0" y="150" width="150" height="92" rx="6" class="box"/><text x="320" y="182" class="t" text-anchor="middle" font-size="14">构建孪生</text><text x="320" y="204" class="t-s" text-anchor="middle">人设合成</text><text x="320" y="220" class="t-s" text-anchor="middle">真值=自报区间</text><path d="M395.0,196 L405.0,196" class="arrow"/><rect x="445.0" y="150" width="150" height="92" rx="6" class="box"/><text x="520" y="182" class="t" text-anchor="middle" font-size="14">A/B 预试</text><text x="520" y="204" class="t-s" text-anchor="middle">陪伴式 vs 建议式</text><text x="520" y="220" class="t-s" text-anchor="middle">剂量 0 / 6 / 12 轮</text><path d="M595.0,196 L605.0,196" class="arrow"/><rect x="645.0" y="150" width="150" height="92" rx="6" class="box"/><text x="720" y="182" class="t" text-anchor="middle" font-size="14">剂量-反应</text><text x="720" y="204" class="t-s" text-anchor="middle">Δ 均值 ± 95% CI</text><text x="720" y="220" class="t-s" text-anchor="middle">效应量比较</text><path d="M795.0,196 L805.0,196" class="arrow"/><rect x="810.0" y="150" width="140" height="92" rx="6" class="box-verm"/><text x="880" y="182" class="t-w" text-anchor="middle" font-size="14">匹配推荐</text><text x="880" y="204" class="t-w" text-anchor="middle">选效应最大臂</text><text x="880" y="220" class="t-w" text-anchor="middle">交叉验证 E3</text><path d="M880,242 L880,320 L120,320 L120,242" class="arrow" stroke-dasharray="4 4"/><text x="480.0" y="338" class="t-s" text-anchor="middle">推荐方案回用到真实用户（决策辅助，非临床证据）</text><text x="480.0" y="384" class="sub" text-anchor="middle">诚实声明：孪生预演结果与 E3 同构实验交叉验证后才进入推荐</text></svg>
