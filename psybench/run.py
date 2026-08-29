@@ -35,6 +35,10 @@ def main():
                         help="E3 干预对话轮数")
     parser.add_argument("--temperature", type=float, default=0.8)
     parser.add_argument("--only-e1", action="store_true")
+    parser.add_argument("--only-e5", action="store_true")
+    parser.add_argument("--only-e6", action="store_true")
+    parser.add_argument("--only-e7", action="store_true")
+    parser.add_argument("--only-e8", action="store_true")
     parser.add_argument("--only-e3", action="store_true")
     parser.add_argument("--only-e4", action="store_true")
     parser.add_argument("--report-only", action="store_true")
@@ -61,6 +65,7 @@ def main():
         return
 
     from .experiment import run_e1, run_e3, run_e4, run_all
+    from .culture import run_e5
     from .souls import ALL_SOULS
     if args.only_e1:
         run_e1(provider, list(ALL_SOULS.keys()), ["ucla3", "phq9", "gad7"],
@@ -68,6 +73,23 @@ def main():
     elif args.only_e4:
         run_e4(provider, list(ALL_SOULS.keys()), ["ucla3", "phq9", "gad7"],
                args.e1_sessions, args.out, temperature=args.temperature)
+    elif args.only_e5:
+        run_e5(provider, list(ALL_SOULS.keys()), ["ucla3", "phq9", "gad7"],
+               args.e1_sessions, args.out, temperature=args.temperature)
+    elif args.only_e6:
+        from .crisis import run_e6
+        run_e6(provider, out_dir=args.out)
+    elif args.only_e7:
+        from .twin import run_e7
+        run_e7(provider, ["t1_high_lonely"], doses=[0, 6, 12], n_sessions=2,
+               out_dir=args.out, temperature=0.85)
+        run_e7(provider, ["t2_high_pressure"], doses=[12], n_sessions=2,
+               out_dir=args.out, temperature=0.85)
+    elif args.only_e8:
+        from .drift import run_e8
+        run_e8(provider, ["chen_yu", "lin_han", "mo_ran"],
+               ["ucla3", "phq9", "gad7"], [0.2, 0.8, 1.4], ["zh", "en"],
+               args.e1_sessions, args.out)
     elif args.only_e3:
         run_e3(provider, "chen_yu", ["companion", "neutral", "thinking"],
                args.e3_sessions, args.rounds, args.out,

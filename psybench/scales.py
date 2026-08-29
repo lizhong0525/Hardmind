@@ -38,9 +38,23 @@ class Scale:
     score_multiplier: int = 1     # 原始总分 → 报告总分的换算倍数（如 WHO-5 ×4）
     bands: List[tuple] = field(default_factory=list)   # [(上限, "分级名称"), ...]
     norm_note: str = ""           # 常模说明（参考文献）
+    items_en: Optional[List[str]] = None   # 英文原版条目（E5 文化等价性实验用）
+    options_en: Optional[List[str]] = None # 英文原版选项
 
     def n_items(self) -> int:
         return len(self.items)
+
+    def items_for(self, lang: str = "zh") -> List[str]:
+        """按语言返回条目文本（无英文版时回退中文版）。"""
+        if lang == "en" and self.items_en:
+            return self.items_en
+        return self.items
+
+    def options_for(self, lang: str = "zh") -> List[str]:
+        """按语言返回选项标签（无英文版时回退中文版）。"""
+        if lang == "en" and self.options_en:
+            return self.options_en
+        return self.options
 
     def score(self, raw_items: List[int]) -> int:
         """由原始作答计算总分（自动处理反向题与换算倍数）。
@@ -106,6 +120,29 @@ UCLA3 = Scale(
         "你常感到有人愿意与你交谈吗？",
         "你常感到有人值得你信赖吗？",
     ],
+    options_en=["Never", "Rarely", "Sometimes", "Always"],
+    items_en=[
+        "How often do you feel that you are ‘in tune’ with the people around you?",
+        "How often do you feel that you lack companionship?",
+        "How often do you feel that there is no one you can turn to?",
+        "How often do you feel alone?",
+        "How often do you feel part of a group of friends?",
+        "How often do you feel that you have a lot in common with the people around you?",
+        "How often do you feel that you are no longer close to anyone?",
+        "How often do you feel that your interests and ideas are not shared by those around you?",
+        "How often do you feel outgoing and friendly?",
+        "How often do you feel close to people?",
+        "How often do you feel left out?",
+        "How often do you feel that your relationships with others are not meaningful?",
+        "How often do you feel that no one really knows you well?",
+        "How often do you feel isolated from others?",
+        "How often do you feel you can find companionship when you want it?",
+        "How often do you feel that there are people who really understand you?",
+        "How often do you feel shy?",
+        "How often do you feel that people are around you but not with you?",
+        "How often do you feel that there are people you can talk to?",
+        "How often do you feel that there are people you can turn to?",
+    ],
     bands=[
         (27, "低孤独（Low）"),
         (39, "中低孤独（Below Average）"),
@@ -144,6 +181,18 @@ PHQ9 = Scale(
         "动作或说话速度缓慢到别人已经察觉，或正好相反——烦躁或坐立不安、动来动去的情况更胜于平常",
         "有不如死掉或用某种方式伤害自己的念头",
     ],
+    options_en=["Not at all", "Several days", "More than half the days", "Nearly every day"],
+    items_en=[
+        "Little interest or pleasure in doing things",
+        "Feeling down, depressed, or hopeless",
+        "Trouble falling or staying asleep, or sleeping too much",
+        "Feeling tired or having little energy",
+        "Poor appetite or overeating",
+        "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
+        "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual",
+        "Thoughts that you would be better off dead or of hurting yourself in some way",
+    ],
     bands=[
         (4, "无抑郁（None）"),
         (9, "轻度抑郁（Mild）"),
@@ -179,6 +228,16 @@ GAD7 = Scale(
         "由于不安而无法静坐",
         "变得容易烦恼或急躁",
         "感到似乎将有可怕的事情发生而害怕",
+    ],
+    options_en=["Not at all", "Several days", "More than half the days", "Nearly every day"],
+    items_en=[
+        "Feeling nervous, anxious, or on edge",
+        "Not being able to stop or control worrying",
+        "Worrying too much about different things",
+        "Trouble relaxing",
+        "Being so restless that it is hard to sit still",
+        "Becoming easily annoyed or irritable",
+        "Feeling afraid, as if something awful might happen",
     ],
     bands=[
         (4, "无焦虑（None）"),
@@ -218,6 +277,19 @@ PSS10 = Scale(
         "因为一些超出自己控制能力的事情而感到生气",
         "感到困难堆积如山，高到无法克服",
     ],
+    options_en=["Never", "Almost never", "Sometimes", "Fairly often", "Very often"],
+    items_en=[
+        "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        "In the last month, how often have you felt that you were unable to control the important things in your life?",
+        "In the last month, how often have you felt nervous and stressed?",
+        "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+        "In the last month, how often have you felt that things were going your way?",
+        "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+        "In the last month, how often have you been able to control irritations in your life?",
+        "In the last month, how often have you felt that you were on top of things?",
+        "In the last month, how often have you been angered because of things that were outside of your control?",
+        "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+    ],
     bands=[
         (13, "低压力"),
         (20, "中等压力"),
@@ -250,6 +322,15 @@ WHO5 = Scale(
         "我感觉充满活力、精力充沛",
         "我睡醒时感到清新、得到了足够休息",
         "我每天的生活充满了让我感兴趣的事情",
+    ],
+    options_en=["At no time", "Some of the time", "Less than half of the time",
+                "More than half of the time", "Most of the time", "All of the time"],
+    items_en=[
+        "I have felt cheerful and in good spirits",
+        "I have felt calm and relaxed",
+        "I have felt active and vigorous",
+        "I woke up feeling fresh and rested",
+        "My daily life has been filled with things that interest me",
     ],
     bands=[
         (28, "幸福感很低（可能提示抑郁筛查）"),

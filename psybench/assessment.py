@@ -26,8 +26,15 @@ from .souls import Soul
 from .providers import LLMProvider
 
 
+PERIOD_EN = {
+    "最近两周": "over the last two weeks",
+    "最近（一般感受）": "recently (in general)",
+    "最近一个月": "over the last month",
+}
+
+
 def build_survey_messages(soul: Soul, scale: Scale, history: Optional[List[Dict]] = None,
-                           survey_extra: str = ""):
+                           survey_extra: str = "", lang: str = "zh"):
     """
     构造一份「盲测问卷」消息序列。
 
@@ -37,13 +44,42 @@ def build_survey_messages(soul: Soul, scale: Scale, history: Optional[List[Dict]
       history     : 可选的历史消息（用于同会话后测，保留干预对话记忆）
       survey_extra: 附加的施测说明（仅用于 E4 作答风格校正对照实验；
                     默认空字符串，即标准盲测协议）
+      lang        : 施测语境语言 zh/en（E5 文化等价性实验；
+                    en 时人设、指导语、条目、选项全部为英文）
 
     返回：可直接交给 provider.chat() 的消息列表。
     """
     if history:
         messages = list(history)
     else:
-        messages = [{"role": "system", "content": soul.build_system_prompt()}]
+        messages = [{"role": "system", "content": soul.build_system_prompt(lang)}]
+
+    items = scale.items_for(lang)
+    options = scale.options_for(lang)
+    if lang == "en":
+        period_text = PERIOD_EN.get(scale.period, scale.period)
+        survey_system = (
+            "[Mental Health Service System - Anonymous Survey]\n"
+            "The university mental health center is conducting an anonymous survey. "
+            "Please complete it.\n"
+            f"Please rate each of the following {scale.n_items()} items according to how "
+            f"you have truly felt {period_text}.\n"
+            "Scoring rule: give exactly one integer score per item; a higher score means "
+            "the statement fits you more.\n"
+            "Output: ONLY a JSON array of numbers, with no other text.\n"
+            "The array length must exactly equal the number of items, in the same order."
+            + survey_extra
+        )
+        messages.append({"role": "system", "content": survey_system})
+        options_text = ", ".join(f"{i}={opt}" for i, opt in enumerate(options, start=scale.min_score))
+        items_text = "\n".join(f"{i+1}. {t}" for i, t in enumerate(items))
+        user_text = (
+            f"Please rate (scores range from {scale.min_score} to {scale.max_score}, "
+            f"where {options_text}).\n{items_text}\n\n"
+            f"Output ONLY a JSON array of length {scale.n_items()}, like [x, x, ..., x]:"
+        )
+        messages.append({"role": "user", "content": user_text})
+        return messages
 
     # 通用问卷说明：不点明量表名称与所测构念，保持前后测文本完全一致
     survey_system = (
@@ -59,8 +95,8 @@ def build_survey_messages(soul: Soul, scale: Scale, history: Optional[List[Dict]
     # 选项标签必须与实际分值范围对齐（如 UCLA-3 为 1=从不…4=一直，
     # PHQ-9/GAD-7 为 0=完全不会…3=几乎每天）。
     # 修复前从 0 开始枚举，导致 1-4 量表上模型按 0-3 作答，总分被污染。
-    options_text = "，".join(f"{i}={opt}" for i, opt in enumerate(scale.options, start=scale.min_score))
-    items_text = "\n".join(f"{i+1}. {t}" for i, t in enumerate(scale.items))
+    options_text = "，".join(f"{i}={opt}" for i, opt in enumerate(options, start=scale.min_score))
+    items_text = "\n".join(f"{i+1}. {t}" for i, t in enumerate(items))
     user_text = (
         f"请评分（分值范围 {scale.min_score} 到 {scale.max_score}，"
         f"其中 {options_text}）。\n{items_text}\n\n"
@@ -111,7 +147,7 @@ def parse_item_scores(raw: str, scale: Scale) -> Optional[List[int]]:
 def administer_scale(provider: LLMProvider, soul: Soul, scale: Scale,
                      history: Optional[List[Dict]] = None,
                      temperature: float = 0.8, max_retries: int = 3,
-                     survey_extra: str = "") -> Dict:
+                     survey_extra: str = "", lang: str = "zh") -> Dict:
     """
     执行一次标准化施测。
 
@@ -122,7 +158,8 @@ def administer_scale(provider: LLMProvider, soul: Soul, scale: Scale,
         return (s is not None and len(s) == scale.n_items()
                 and all(scale.min_score <= int(v) <= scale.max_score for v in s))
 
-    messages = build_survey_messages(soul, scale, history, survey_extra=survey_extra)
+    messages = build_survey_messages(soul, scale, history, survey_extra=survey_extra,
+                                     lang=lang)
     raw = provider.chat(messages, temperature=temperature, max_tokens=400)
     scores = parse_item_scores(raw, scale)
     attempt = 0
@@ -133,9 +170,14 @@ def administer_scale(provider: LLMProvider, soul: Soul, scale: Scale,
                 f"量表 {scale.key} 解析失败，模型输出: {raw[:200]}...")
         # 追加纠偏轮：要求模型严格按格式重答
         messages.append({"role": "assistant", "content": raw})
-        messages.append({"role": "user", "content":
-            f"格式不正确。请只输出一个长度为 {scale.n_items()} 的 JSON 数字数组，"
-            f"每个数字在 {scale.min_score}-{scale.max_score} 之间，不要任何其他文字。"})
+        if lang == "en":
+            messages.append({"role": "user", "content":
+                f"Wrong format. Output ONLY a JSON array of {scale.n_items()} numbers, "
+                f"each between {scale.min_score} and {scale.max_score}, with no other text."})
+        else:
+            messages.append({"role": "user", "content":
+                f"格式不正确。请只输出一个长度为 {scale.n_items()} 的 JSON 数字数组，"
+                f"每个数字在 {scale.min_score}-{scale.max_score} 之间，不要任何其他文字。"})
         raw = provider.chat(messages, temperature=0.2, max_tokens=400)
         scores = parse_item_scores(raw, scale)
     # 收尾：把最终回复也计入历史，保证后测时模型"记得"自己的作答
@@ -151,7 +193,8 @@ def administer_scale(provider: LLMProvider, soul: Soul, scale: Scale,
 
 
 def administer_battery(provider: LLMProvider, soul: Soul, scale_keys,
-                       history: Optional[List[Dict]] = None, temperature: float = 0.8):
+                       history: Optional[List[Dict]] = None, temperature: float = 0.8,
+                       lang: str = "zh"):
     """
     在同一会话内顺序施测多个量表（用于前后测的成套测评）。
     返回 {scale_key: result}。
@@ -162,7 +205,7 @@ def administer_battery(provider: LLMProvider, soul: Soul, scale_keys,
     for key in scale_keys:
         scale = get_scale(key)
         res = administer_scale(provider, soul, scale, history=cur_history,
-                              temperature=temperature)
+                              temperature=temperature, lang=lang)
         results[key] = res
         cur_history = res["history"]
     return results
